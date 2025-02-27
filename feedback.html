@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #050000;
+            display: flex;
+            flex-direction: column;
+            min-height: 150vh;
+        }
+
+        header {
+            width: 107%;
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a i {
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            color: blueviolet;
+        }
+
+        .container {
+            flex: 1; /* Takes up the remaining space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container form {
+            width: 60%; /* Increased form size */
+            padding: 30px;
+            background-color: rgb(187, 201, 230);
+            border-radius: 8px;
+            box-shadow: 0 8px 20px rgb(46, 26, 194);
+            animation: flashIn 1s ease-in-out forwards;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            text-align: center;
+            color: green;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        footer {
+            width: 100%;
+            background-color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 50px;
+            flex-wrap: wrap;
+        }
+
+        footer .social-icons, .menu-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons a, .menu-links a {
+            text-decoration: none;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        footer .social-icons a i, .menu-links a i {
+            font-size: 20px;
+        }
+
+        footer a:hover {
+            color: blueviolet;
+        }
+
+        footer .logo {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        @keyframes flashIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10%);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="home.html" style="margin-left: 800px;"><i class="fas fa-home"></i> Home</a>
+            <a href="info.html"><i class="fas fa-info-circle"></i> Info</a>
+            <a href="index.html"><i class="fas fa-chart-line"></i> Predict</a>
+            <a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form id="feedbackForm" onsubmit="return showMessage()">
+            <h2>Feedback Form</h2>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </form>
+        <div id="confirmationMessage" class="message" style="display: none;">Thank you! Your feedback has been recorded.</div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/AmericanCancerSociety" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/americancancersociety/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://x.com/americancancer" target="_blank"><i class="fab fa-twitter"style="margin-left: -25px;"></i> Twitter</a>
+            <a href="https://www.youtube.com/user/AmerCancerSociety" target="_blank"><i class="fab fa-youtube"style="margin-left: -15px;"></i> YouTube</a>
+        </div> 
+
+        
+        <div class="logo">
+            <img src="logo.jpeg" alt="National Health Council Logo" style="width: 250px;height: 200px;margin-left: -20px;">
+        </div>
+        
+
+        <div class="menu-links">
+            <a href="home.html"><i class="fas fa-home"style="margin-left: -250px;"></i> Home</a>
+            <a href="info.html"><i class="fas fa-info-circle"style="margin-left: -270px;"></i> Info</a>
+            <a href="index.html"><i class="fas fa-chart-line"style="margin-left: -250px;"></i> Predict</a>
+            <a href="feedback.html"><i class="fas fa-comment-dots"style="margin-left: -230px;"></i> Feedback</a>
+        </div>
+
+       
+       
+    </footer>
+
+    <script>
+        function showMessage() {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById('feedbackForm').reset(); // Reset the form
+            document.getElementById('confirmationMessage').style.display = 'block'; // Show confirmation message
+        }
+    </script>
+
+</body>
+</html>

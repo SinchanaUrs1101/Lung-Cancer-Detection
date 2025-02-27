@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+        }
+        /* Header styles */
+        header {
+            width: 105%;
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a i {
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            color: blueviolet;
+        }
+        
+        img{
+            max-width: 100%;
+            height: 420px;
+            border: 4px solid darkgrey;
+            border-radius: 10px;
+            box-shadow: 1px 2px 4px solid;
+            margin-right: 20px;
+            margin-top: 35px;
+        }
+        
+        .title {
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+            animation: flashIn 1.5s ease-out;
+            
+        }
+        @keyframes flashIn {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .about {
+            background-color: aliceblue;
+            color:  black;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin: 20px 50px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 
+                0 4px 10px rgba(244, 3, 3, 0.8), 
+                0 4px 10px rgba(12, 29, 211, 0.8), 
+                0 4px 10px rgba(39, 237, 46, 0.8),
+                0 4px 10px rgba(209, 29, 203, 0.8);
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-100%);
+            animation: slideIn 2s ease-out forwards;
+        }
+
+        /* Hover effect for the box shadow to enhance the effect */
+        .about:hover {
+            box-shadow: 
+                0 8px 20px rgb(14, 185, 215),
+                0 8px 20px rgb(7, 52, 230),
+                0 8px 20px rgb(5, 253, 26),
+                0 8px 20px rgb(209, 29, 164);
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .about p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .about1{
+            background-color: aliceblue;
+            color:  black;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin: 20px 50px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 
+                0 4px 10px rgba(244, 3, 3, 0.8), 
+                0 4px 10px rgba(12, 29, 211, 0.8), 
+                0 4px 10px rgba(39, 237, 46, 0.8),
+                0 4px 10px rgba(209, 29, 203, 0.8);
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-100%);
+            animation: slideIn 2s ease-out forwards;
+        }
+
+        /* Hover effect for the box shadow to enhance the effect */
+        .about1:hover {
+            box-shadow: 
+                0 8px 20px rgb(14, 185, 215),
+                0 8px 20px rgb(7, 52, 230),
+                0 8px 20px rgb(5, 253, 26),
+                0 8px 20px rgb(209, 29, 164);
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .about1 img{ 
+            max-width: 100%;
+            height: 220px;
+            border: 4px solid darkgrey;
+            border-radius: 10px;
+            box-shadow: 1px 2px 4px solid;
+            margin-right: 20px;
+            margin-top: -70px;
+        }
+        .about1 p{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 300px; 
+            margin-top: -150px;
+            font-size: larger;
+        }
+        .about2 {
+            background-color: aliceblue;
+            color:  black;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            margin: 20px 50px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 
+                0 4px 10px rgba(244, 3, 3, 0.8), 
+                0 4px 10px rgba(12, 29, 211, 0.8), 
+                0 4px 10px rgba(39, 237, 46, 0.8),
+                0 4px 10px rgba(209, 29, 203, 0.8);
+            transition: all 0.3s ease-in-out;
+            transform: translateX(-100%);
+            animation: slideIn 2s ease-out forwards;
+        }
+
+        /* Hover effect for the box shadow to enhance the effect */
+        .about2:hover {
+            box-shadow: 
+                0 8px 20px rgb(14, 185, 215),
+                0 8px 20px rgb(7, 52, 230),
+                0 8px 20px rgb(5, 253, 26),
+                0 8px 20px rgb(209, 29, 164);
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .about2 ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .about2 li {
+            font-size: 20px;
+            margin: 10px 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .about2 i {
+            color: green;
+            margin-right: 10px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            flex: 1;
+            margin: 20px 50px;
+            padding: 20px;
+            border-radius: 8px;
+            padding: 20px 0;
+            gap: 50px;
+            position: relative;
+        }
+
+        .main-content {
+            cursor: pointer;
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 50px;
+            background-color: #000000;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+        }
+        article {
+            transition: all 0.3s ease;
+            background-color: #060606;
+            padding: 15px;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+            border-radius: 7px;
+            color: #f7f4f4;
+        }
+
+        figure {
+            background-color: #000000;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            margin: 0;
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: #ffffff;
+        }
+
+        .main-content img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        article p {
+            text-align: left;
+            line-height: 1.2;
+            margin-top: 10px;
+        }
+        article:hover {
+            background-color: #000000;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                padding: 10px;
+            }
+        }
+        footer {
+            width: 95%;
+            background-color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 50px;
+            padding-right: 50px;
+            flex-wrap: wrap;
+        }
+
+        footer .social-icons, .menu-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons a, .menu-links a {
+            text-decoration: none;
+            color: black;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        footer .social-icons a i, .menu-links a i {
+            font-size: 20px;
+        }
+
+        footer a:hover {
+            color: blueviolet;
+        }
+
+        footer .logo {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html" style="margin-left: 900px;"><i class="fas fa-home"></i> Home</a>
+            <a href="info.html"><i class="fas fa-info-circle"></i> Info</a>
+            <a href="index.html"><i class="fas fa-chart-line"></i> Predict</a>
+            <a href="feedback.html"><i class="fas fa-comment-dots"></i> Feedback</a>
+        </nav>
+    </header>
+    <img src="1.jpg" alt="">
+    <div class="title">
+        <p> Lung Cancer</p>
+    </div>
+    <div class="paragraph">
+        <div class="about">
+            <h2 style="text-align: center;">About</h2>
+            <p>Lung cancer is a cancer that develops in the lungs, usually in the cells that line the air passages.
+             It's the leading cause of cancer death in both men and women. <br>
+             Lung cancer happens when cells in the lung change (or mutate). Most often, this is because of exposure to dangerous chemicals that we breathe. 
+             But lung cancer can also happen in people with no known exposure to toxic substances. Unlike normal cells, cancer cells grow uncontrollably and 
+             cluster together to form a tumor, destroying healthy lung tissue around them. Symptoms usually do not appear until cancer cells spread to other 
+             parts of the body and prevent other organs from functioning properly. At this point, it is harder to treat lung cancer.</p>
+            
+        </div>
+        <div class="about1">
+            <h2 style="text-align: center;">Early Detection Is Important</h2>
+            <img src="2.jpg" alt="Lung">
+            <p>Though lung cancer is common, many people don't know much about it or are afraid to learn. 
+                Lung cancer can go undiagnosed for a long time because symptoms usually do not appear until the cancer has spread. If you are over the age of 50 and 
+                currently smoke,or have quit within the last 15 years, you may be at high risk and be eligible for lung cancer screening.</p>
+        </div>
+        <div class="about2">
+           
+            <div>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <b>Causes:</b>Smoking is the leading cause of lung cancer, responsible for about 85% of all cases. Other risk factors include exposure to dangerous chemicals, radon gas, air pollution, and previous chest problems or lung diseases. </li>
+                        <li><i class="fas fa-check-circle"></i> <b>Symptoms:</b>Symptoms usually don't appear until the cancer has spread to other parts of the body. Symptoms include chest pain, unexplained weight loss, and loss of appetite.</li>
+                        <li><i class="fas fa-check-circle"></i> <b>Types:</b>The two main types of lung cancer are non-small cell lung cancer and small cell lung cancer.</li>
+                        <li><i class="fas fa-check-circle"></i> <b>Diagnosis:</b>A doctor will ask about your health history, perform a physical exam, and may order tests like blood tests, imaging scans, and lung function tests. </li>
+                        <li><i class="fas fa-check-circle"></i> <b>Treatment:</b>Lung cancer is often diagnosed at advanced stages when treatment options are limited. </li>
+                        <li><i class="fas fa-check-circle"></i> <b>Prevention:</b>Reducing exposure to environmental risk factors and tobacco control measures can help reduce the incidence of lung cancer.</li>
+                    </ul>
+                </div>
+        </div>
+        <P style="background-color: white; color: black; font-weight: bolder; font-family: Verdana, Geneva, Tahoma, sans-serif; box-shadow: blue; margin-top: 50PX; text-align: center;"> HERE ARE SOME OF THE TOP LUNG CANCER SPECIALISTS OF INDIA!!</P>
+        
+        <div class="content">
+            <main class="main-content">
+                <article>
+                    <figure>
+                        <img src="dr1.jpg" alt="Placeholder Image">
+                        <figcaption>Dr. Arvind Kumar</figcaption>
+                    </figure>
+                    <p> A renowned lung cancer surgeon at Medanta - The Medicity in Gurgaon, India. 
+                        He has over 30 years of experience and is known for his expertise in minimally invasive techniques. <br><a href="https://www.practo.com/Bangalore/doctor/arvind-kumar-s-orthopedist"><center>BOOK AN APPOINTMENT</center></a></p>
+                </article>
+    
+                <article>
+                    <figure>
+                        <img src="dr2.jpg" alt="Placeholder Image">
+                        <figcaption>Dr. Suresh Advani</figcaption>
+                    </figure>
+                    <p>A medical oncologist in Mumbai, India with over 50 years of experience. 
+                        He is a recipient of the Padma Bhushan and Padma Shri awards. <br><a href="https://drsureshadvani.in/make-appointment/"><center>BOOK AN APPOINTMENT</center></a></p>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="dr3.jpg" alt="Placeholder Image">
+                        <figcaption>Dr. Shiva Kumar</figcaption>
+                    </figure>
+                    <p>An oncologist at Jayashree Multispeciality Hospital in Bangalore, India with 16 years of experience. <br><a href="https://www.credihealth.com/doctor/shiva-kumar-uppala-surgical-oncologist/appointment"><center>BOOK AN APPOINTMENT</center></a></p>
+                </article>
+    
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/AmericanCancerSociety" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/americancancersociety/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+            <a href="https://x.com/americancancer" target="_blank"><i class="fab fa-twitter"style="margin-left: -25px;"></i> Twitter</a>
+            <a href="https://www.youtube.com/user/AmerCancerSociety" target="_blank"><i class="fab fa-youtube"style="margin-left: -15px;"></i> YouTube</a>
+        </div> 
+
+        
+        <div class="logo">
+            <img src="logo.jpeg" alt="National Health Council Logo" style="width: 250px;height: 200px;margin-left: -20px;">
+        </div>
+        
+
+        <div class="menu-links">
+            <a href="home.html"><i class="fas fa-home"style="margin-left: -250px;"></i> Home</a>
+            <a href="info.html"><i class="fas fa-info-circle"style="margin-left: -270px;"></i> Info</a>
+            <a href="index.html"><i class="fas fa-chart-line"style="margin-left: -250px;"></i> Predict</a>
+            <a href="feedback.html"><i class="fas fa-comment-dots"style="margin-left: -230px;"></i> Feedback</a>
+        </div>
+
+       
+       
+    </footer>
+
+</body>
+</html>
